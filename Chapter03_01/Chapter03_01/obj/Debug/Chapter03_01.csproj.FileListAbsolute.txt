@@ -1,0 +1,6 @@
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\bin\Debug\Chapter03_01.exe.config
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\bin\Debug\Chapter03_01.exe
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\bin\Debug\Chapter03_01.pdb
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\obj\Debug\Chapter03_01.csprojResolveAssemblyReference.cache
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\obj\Debug\Chapter03_01.exe
+D:\Aurum\Lecture\CSharp\Chapter03_01\Chapter03_01\obj\Debug\Chapter03_01.pdb

@@ -1,0 +1,6 @@
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\bin\Debug\C01.HelloWorld.exe.config
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\bin\Debug\C01.HelloWorld.exe
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\bin\Debug\C01.HelloWorld.pdb
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\obj\Debug\C01.HelloWorld.csprojResolveAssemblyReference.cache
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\obj\Debug\C01.HelloWorld.exe
+D:\Aurum\Lecture\CSharp\C01.HelloWorld\C01.HelloWorld\obj\Debug\C01.HelloWorld.pdb

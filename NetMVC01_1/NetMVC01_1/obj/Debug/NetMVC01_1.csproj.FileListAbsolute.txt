@@ -1,0 +1,48 @@
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.dll.config
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.pdb
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Helpers.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Razor.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Deployment.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Razor.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Razor.xml
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.xml
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Deployment.xml
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Razor.xml
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Helpers.xml
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Razor.resources.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.resources.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.Deployment.resources.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.Razor.resources.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Helpers.resources.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.dll
+c:\users\user\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.pdb
+C:\Users\User\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Mvc.dll
+C:\Users\User\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\System.Web.Mvc.xml
+C:\Users\User\documents\visual studio 2013\Projects\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Mvc.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.dll.config
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\NetMVC01_1.pdb
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Helpers.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Mvc.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Razor.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Deployment.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Razor.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Razor.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Deployment.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Webpages.Razor.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Helpers.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\System.Web.Mvc.xml
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Razor.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.Deployment.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Webpages.Razor.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Helpers.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\bin\ko\System.Web.Mvc.resources.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.csprojResolveAssemblyReference.cache
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.dll
+D:\Aurum\Lecture\CSharp\NetMVC01_1\NetMVC01_1\obj\Debug\NetMVC01_1.pdb
