@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Collections;
+
 namespace Chapter03_01
 {
     class Program
@@ -63,8 +65,95 @@ namespace Chapter03_01
                 Console.Write( "{0},", iter );
             }
 
-                Console.ReadKey();
+            ArrayList tmpAL = new ArrayList();
+            tmpAL.Add( 10 );
+            tmpAL.Add( "AAA" );
+            tmpAL.Add( 20 );
+            tmpAL.Add( "BBB" );
+            tmpAL.Add( 30 );
+            Console.WriteLine( tmpAL[ 0 ] );
+            Console.WriteLine( tmpAL[ 3 ] );
 
+            Console.WriteLine();
+            for(i=0;i<tmpAL.Count;i++)
+            {
+                Console.Write( "{0},", tmpAL[ i ] );
+            }
+            Console.WriteLine();
+            foreach(Object iter in tmpAL)
+            {
+                Console.Write( "{0},", iter );
+            }
+
+            int sum = 0;
+            foreach(Object iter in tmpAL)
+            {
+                if(iter is int)
+                {
+                    int tmpValue = (int) iter;
+                    sum += tmpValue;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine( "Sum :{0}", sum );
+
+            tmpAL[ 0 ] = 333;
+            tmpAL.Insert( 1, "333" );
+            Console.WriteLine();
+            foreach(Object iter in tmpAL)
+            {
+                Console.Write( "{0},", iter );
+            }
+            if(tmpAL.Contains(333)==true)
+            {
+                Console.WriteLine( "Find!!" );
+            }
+
+            tmpAL.RemoveAt( 0 );
+            tmpAL.Remove( "AAA" );
+            Console.WriteLine();
+            foreach(Object iter in tmpAL)
+            {
+                Console.Write( "{0},", iter );
+            }
+
+            Queue tmpQ = new Queue();
+            tmpQ.Enqueue( 10 );
+            tmpQ.Enqueue( "AAA" );
+            tmpQ.Enqueue( 20 );
+            Console.WriteLine( tmpQ.Peek() );
+
+            tmpQ.Enqueue( "BBB" );
+            tmpQ.Enqueue( 30 );
+            Console.WriteLine( tmpQ.Peek() );
+
+            Console.WriteLine();
+            foreach ( Object iter in tmpQ )
+            {
+                Console.Write( "{0},", iter );
+            }
+
+            tmpQ.Dequeue();
+            tmpQ.Dequeue();
+
+            Console.WriteLine();
+            foreach(Object iter in tmpQ)
+            {
+                Console.Write( "{0},", iter );
+            }
+
+            Console.WriteLine();
+            while(tmpQ.Count>0)
+            {
+                object obj = tmpQ.Dequeue();
+                Console.Write( "{0},", obj );
+            }
+            Console.WriteLine( "Count:{0}", tmpQ.Count );
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
