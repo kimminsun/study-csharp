@@ -150,8 +150,44 @@ namespace Chapter03_01
             }
             Console.WriteLine( "Count:{0}", tmpQ.Count );
 
+            Hashtable tmpHT = new Hashtable();
+            tmpHT.Add( "C++", 77 );
+            tmpHT.Add( "Java", 85 );
+            tmpHT.Add( "C#", 100 );
+            foreach(DictionaryEntry iter in tmpHT)
+            {
+                Console.WriteLine( "{0}, {1}", iter.Key, iter.Value );
+            }
 
+            foreach(object iter in tmpHT.Keys)
+            {
+                Console.WriteLine( "K:{0}, V:{1}", iter, tmpHT[ iter ] );
+            }
+            if ( tmpHT.Contains( "C++" ) == true )
+            {
+                tmpHT[ "C++" ] = 70;
+            }
+            else
+            {
+                tmpHT.Add( "C++", 70 );
+            }
+            foreach(DictionaryEntry iter in tmpHT)
+            {
+                Console.WriteLine( "{0},{1}", iter.Key, iter.Value );
+            }
 
+            tmpHT[ "swift" ] = 90;
+            tmpHT[ "swift" ] = 83;
+            foreach(DictionaryEntry iter in tmpHT)
+            {
+                Console.WriteLine( "{0},{1}", iter.Key, iter.Value );
+            }
+
+            tmpHT.Remove( "C++" );
+            foreach(DictionaryEntry iter in tmpHT)
+            {
+                Console.WriteLine( "{0},{1}", iter.Key, iter.Value );
+            }
 
             Console.ReadKey();
         }
