@@ -22,15 +22,14 @@ namespace Chapter03_02
             tmpP[ "Z" ] = 36;
             Console.WriteLine( "Z:{0}", tmpP.theZ );
             Console.WriteLine( "[2]:{0}", tmpP[ 2 ] );
-            Console.WriteLine( "\"Z\":{0}", tmpP["Z"] );
+            Console.WriteLine( "\"Z\":{0}", tmpP[ "Z" ] );
 
             Console.WriteLine();
             string[] tmpStrs = { "X", "Y", "Z", "W" };
-            foreach(string iter in tmpStrs)
+            foreach ( string iter in tmpStrs )
             {
                 Console.WriteLine( "{0}:{1}", iter, tmpP[ iter ] );
             }
-
             List<int> tmpList = new List<int>();
 
             tmpList.Add( 35 );
@@ -40,37 +39,36 @@ namespace Chapter03_02
             Console.WriteLine( tmpList[ 0 ] );
             Console.WriteLine( tmpList[ 1 ] );
 
-            foreach(int iter in tmpList)
+            foreach ( int iter in tmpList )
             {
                 Console.WriteLine( iter );
             }
             tmpList.Sort();
-            foreach(int iter in tmpList)
+            foreach ( int iter in tmpList )
             {
                 Console.WriteLine( iter );
             }
-
             List<string> strList = new List<string>();
             strList.Add( "VIPS" );
-            strList.Add( "Vshley" );
-            strList.Add( "Outback" );
+            strList.Add( "Ashley" );
+            strList.Add( "outback" );
 
             strList.Sort();
-            foreach(string iter in strList)
+            foreach ( string iter in strList )
             {
                 Console.WriteLine( iter );
             }
-            if(strList.Contains("VIPS")==true)
+            if ( strList.Contains( "VIPS" ) == true )
             {
                 Console.WriteLine( "Find!" );
             }
-
             List<List<string>> itemList = new List<List<string>>();
             List<string> itemAttack = new List<string>();
             itemAttack.Add( "Sword" );
             itemAttack.Add( "Axe" );
             itemAttack.Add( "Spear" );
             itemList.Add( itemAttack );
+
 
             List<string> itemDefend = new List<string>();
             itemDefend.Add( "Shield" );
@@ -84,19 +82,69 @@ namespace Chapter03_02
             itemPortion.Add( "Fast" );
             itemList.Add( itemPortion );
 
-            foreach(List<string>iterList in itemList)
+            foreach ( List<string> iterList in itemList )
             {
-                foreach(string iterStr in iterList)
+                foreach ( string iterStr in iterList )
                 {
                     Console.Write( iterStr );
                     Console.Write( " " );
-
                 }
                 Console.WriteLine();
             }
             Console.WriteLine( itemList[ 0 ][ 1 ] );
             Console.WriteLine( itemList[ 1 ][ 0 ] );
             Console.WriteLine( itemList[ 2 ][ 2 ] );
+
+            SortedList<string, int> tmpSL = new SortedList<string, int>();
+
+            tmpSL.Add( "Hong", 89 );
+            tmpSL.Add( "Lee", 85 );
+            tmpSL.Add( "Choi", 75 );
+            tmpSL.Add( "Kim", 92 );
+
+            foreach ( KeyValuePair<string, int> iter in tmpSL )
+            {
+                Console.WriteLine( "{0} : {1}", iter.Key, iter.Value );
+            }
+            foreach ( string key in tmpSL.Keys )
+            {
+                Console.WriteLine( "{0} : {1}", key, tmpSL[ key ] );
+            }
+            tmpSL[ "Jung" ] = 89; //Add
+            tmpSL[ "Hong" ] = 95;//Modify
+            foreach ( string key in tmpSL.Keys )
+            {
+                Console.WriteLine( "{0}:{1}", key, tmpSL[ key ] );
+            }
+            tmpSL[ "choi" ] = 92; //Modify
+            Console.WriteLine( "===Score List===" );
+
+            SortedList<int, List<string>> tmpScores = new SortedList<int, List<string>>();
+            foreach ( KeyValuePair<string, int> iter in tmpSL )
+            {
+                string tmpName = iter.Key;
+                int tmpScore = iter.Value;
+
+                if ( tmpScores.ContainsKey( tmpScore ) == true )
+                {
+                    tmpScores[ tmpScore ].Add( tmpName );
+                }
+                else
+                {
+                    List<string> tmpArrs = new List<string>();
+                    tmpArrs.Add( tmpName );
+                    tmpScores.Add( tmpScore, tmpArrs );
+                }
+            }
+            foreach ( int iterScore in tmpScores.Keys.Reverse() )
+            {
+                Console.Write( "{0} : ", iterScore );
+                foreach ( string iterName in tmpScores[ iterScore ] )
+                {
+                    Console.Write( "{0}, ", iterName );
+                }
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
         }
