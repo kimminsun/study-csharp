@@ -146,6 +146,60 @@ namespace Chapter03_02
                 Console.WriteLine();
             }
 
+            Console.WriteLine( "===TEPS List===" );
+
+            SortedList<string, List<int>> tmpTEPS = new SortedList<string, List<int>>();
+
+            Random rand = new Random();
+            String[] tNames = { "Kwak", "Goo", "Park", "Yoo", "Lim" };
+            foreach(string iter in tNames)
+            {
+                List<int> tScores = new List<int>();
+                int tCount = rand.Next() % 7 + 4;
+                for(int i=0;i<tCount;i++)
+                {
+                    tScores.Add( rand.Next() % 700 + 300 );
+                }
+                tmpTEPS.Add( iter, tScores );
+            }
+            foreach(string iterName in tmpTEPS.Keys)
+            {
+                int tmpSum = 0;
+                Console.Write( "{0,5}", iterName );
+                foreach(int iterScore in tmpTEPS[iterName])
+                {
+                    tmpSum += iterScore;
+                }
+                Console.Write( "({0:F2}):", (float) tmpSum / (float) tmpTEPS[ iterName ].Count );
+                foreach(int iterScore in tmpTEPS[iterName])
+                {
+                    Console.Write( "{0,4},", iterScore );
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine( "===LINQ Sample===" );
+
+            var tmpData = from iterName in tmpTEPS
+                          where iterName.Value.Max() > 650
+                          orderby iterName.Value.Max() descending
+                          select new
+                          {
+                              Name = iterName.Key,
+                              Average = iterName.Value.Max(),
+                              Scores = iterName.Value
+                          };
+            foreach(var iter in tmpData)
+            {
+                Console.Write( "{0:5}", iter.Name );
+                Console.Write( "{0:F2}:", iter.Average );
+                foreach(int iterScore in iter.Scores)
+                {
+                    Console.Write( "{0,4}", iterScore );
+                }
+                Console.WriteLine();
+            }
+
             Console.ReadKey();
         }
     }
