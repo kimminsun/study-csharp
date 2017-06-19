@@ -74,7 +74,7 @@ namespace Chapter03_03
 
             CPoint2<string>[] p2Arr ={new CPoint2<string>("A","B"),
                                    new CPoint2<string>("M","N"),
-                                   new CPoint2<string>("X","y")};
+                                   new CPoint2<string>("X","Y")};
             CPoint2<string>[] p2Res;
             CopyArray<CPoint2<string>>( p2Arr, out p2Res );
             foreach ( CPoint2<string> iter in p2Res )
