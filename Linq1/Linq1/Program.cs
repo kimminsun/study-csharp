@@ -48,6 +48,21 @@ namespace Linq1
             {
                 Console.WriteLine( iter );
             }
+            Console.WriteLine( "===Linq5===" );
+            var resWords5 = words.Where( x => x.Contains( "o" ) );
+            foreach(string iter in resWords5)
+            {
+                Console.WriteLine( iter );
+            }
+
+            Console.WriteLine( "===Linq6===" );
+            var resWords6 = from iter in words
+                            where iter.Contains( "o" )
+                            select iter;
+            foreach(string iter in resWords6)
+            {
+                Console.Write( iter );
+            }
 
             Console.ReadKey();
         }
