@@ -48,6 +48,7 @@ namespace Linq1
             {
                 Console.WriteLine( iter );
             }
+
             Console.WriteLine( "===Linq5===" );
             var resWords5 = words.Where( x => x.Contains( "o" ) );
             foreach(string iter in resWords5)
@@ -73,6 +74,15 @@ namespace Linq1
                     return (x.Substring( 0, tmpIdx + 1 ));
                 } );
             foreach(string iter in resWords7)
+            {
+                Console.WriteLine( iter );
+            }
+
+            Console.WriteLine( "===Linq8===" );
+            var resWords8 = from iter in words
+                            where iter.Contains( "o" )
+                            select iter.Substring( 0, iter.IndexOf( "o" ) + 1 );
+            foreach(string iter in resWords8)
             {
                 Console.WriteLine( iter );
             }
