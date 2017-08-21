@@ -64,6 +64,19 @@ namespace Linq1
                 Console.Write( iter );
             }
 
+            Console.WriteLine( "===Linq7===" );
+            var resWords7 = words
+                .Where( x => x.Contains( "o" ) )
+                .Select( x =>
+                {
+                    int tmpIdx = x.IndexOf( "o" );
+                    return (x.Substring( 0, tmpIdx + 1 ));
+                } );
+            foreach(string iter in resWords7)
+            {
+                Console.WriteLine( iter );
+            }
+
             Console.ReadKey();
         }
     }
