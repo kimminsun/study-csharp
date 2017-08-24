@@ -96,6 +96,31 @@ namespace Linq1
             PrintNumbers( 1, resNums1 );
             PrintNumbers( 2, resNums2 );
 
+            var resNums3 = numbers.Where( num => 10 < num && num < 30 );
+            var resNums4 = from num in numbers
+                           where 10 < num && num < 30
+                           select num;
+            PrintNumbers( 3, resNums3 );
+            PrintNumbers( 4, resNums4 );
+
+            PrintNumbers( 3, resNums3 );
+            PrintNumbers( 4, resNums4 );
+
+            var resNums5 = numbers.Where( ( num, idx ) => num > 10 && idx < 5 );
+            PrintNumbers( 5, resNums5 );
+
+            var resNums6 = numbers.Where( ( num, idx ) => (num > 10 && idx < 5) || (num > 50 && idx >= 5) );
+            PrintNumbers( 6, resNums6 );
+
+            var resNums7 = numbers.OrderBy( num => num );
+            var resNums8 = from num in numbers
+                           orderby num
+                           select num;
+            PrintNumbers( 7, resNums7 );
+            PrintNumbers( 8, resNums8 );
+
+
+
 
 
             Console.ReadKey();
