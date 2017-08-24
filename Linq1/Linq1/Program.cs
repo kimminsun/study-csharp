@@ -87,7 +87,27 @@ namespace Linq1
                 Console.WriteLine( iter );
             }
 
+            int[] numbers = { 35, 10, 27, 31, 23, 30, 0, 74, 81, 56, 45, 93 };
+
+            var resNums1 = numbers.Where( x => x > 30 );
+            var resNums2 = from num in numbers
+                           where num > 30
+                           select num;
+            PrintNumbers( 1, resNums1 );
+            PrintNumbers( 2, resNums2 );
+
+
+
             Console.ReadKey();
+        }
+        public static void PrintNumbers(int aIndex,IEnumerable<int> aNums)
+        {
+            Console.WriteLine( "===Linq Number {0} ===", aIndex );
+            foreach(int iter in aNums)
+            {
+                Console.Write( iter + ", " );
+            }
+            Console.WriteLine();
         }
     }
 }
