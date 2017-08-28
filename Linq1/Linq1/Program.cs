@@ -87,7 +87,7 @@ namespace Linq1
                 Console.WriteLine( iter );
             }
 
-            int[] numbers = { 35, 10, 27, 31, 23, 30, 0, 74, 81, 56, 45, 93 };
+            int[] numbers = { 35, 10, 27, 31, 23, 30, 40, 74, 81, 56, 45, 93 };
 
             var resNums1 = numbers.Where( x => x > 30 );
             var resNums2 = from num in numbers
@@ -118,6 +118,13 @@ namespace Linq1
                            select num;
             PrintNumbers( 7, resNums7 );
             PrintNumbers( 8, resNums8 );
+
+            var resNums9 = numbers.OrderByDescending( num => num );
+            var resNums10 = from num in numbers
+                           orderby num descending
+                           select num;
+            PrintNumbers( 9, resNums9 );
+            PrintNumbers( 10, resNums10 );
 
 
 
