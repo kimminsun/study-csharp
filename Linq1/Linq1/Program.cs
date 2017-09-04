@@ -127,6 +127,48 @@ namespace Linq1
             PrintNumbers( 10, resNums10 );
 
 
+            var resNums11 = numbers.OrderBy( num => (num % 10) * 10 + num / 10 );
+            var resNums12 = from num in numbers
+                            orderby (num % 10) * 10 + num / 10
+                            select num;
+            PrintNumbers( 11, resNums11 );
+            PrintNumbers( 12, resNums12 );
+
+            var resNums13 = numbers.OrderBy( num => num / 10 );
+            var resNums14 = from num in numbers
+                            orderby num / 10
+                            select num;
+            PrintNumbers( 13, resNums13 );
+            PrintNumbers( 14, resNums14 );
+
+            var resNums15 = numbers.OrderBy( num => num % 10 );
+            var resNums16 = from num in numbers
+                            orderby num % 10
+                            select num;
+            PrintNumbers( 15, resNums15 );
+            PrintNumbers( 16, resNums16 );
+
+            var resNums17 = numbers.Where( x => x < 40 ).OrderBy( x => x );
+            var resNums18 = from x in numbers
+                            orderby x < 40
+                            select x;
+            PrintNumbers( 17, resNums17 );
+            PrintNumbers( 18, resNums18 );
+
+            var resNums19 = numbers.Where( x => x < 40 ).OrderByDescending( x => x );
+            var resNums20 = from x in numbers
+                            orderby x < 40 descending
+                            select x;
+            PrintNumbers( 19, resNums19 );
+            PrintNumbers( 20, resNums20 );
+
+            Console.WriteLine( "Count:{0}", resNums19.Count() );
+            Console.WriteLine( "Max:{0}", resNums19.Max() );
+            Console.WriteLine( "Min:{0}", resNums19.Min() );
+            Console.WriteLine( "Average:{0}", resNums19.Average() );
+
+
+
 
 
 
