@@ -240,6 +240,120 @@ namespace Linq1
                 Console.WriteLine( "{0,8}:{1,6}", iter.Title, iter.Price );
             }
 
+            var resBooks9 = books
+                .Where( x => x.Author.StartsWith( "H" ) )
+                .OrderBy( x => x.Price )
+                .Select( x => x.Title );
+
+            var resBooks10 = from book in books
+                             where book.Author.StartsWith( "H" )
+                             orderby book.Price
+                             select book.Title;
+            Console.WriteLine( "resBooks9" );
+            foreach(var iter in resBooks9)
+            {
+                Console.WriteLine( "{0,8}", iter );
+            }
+            Console.WriteLine( "resBooks10" );
+            foreach ( var iter in resBooks10 )
+            {
+                Console.WriteLine( "{0,8}", iter );
+            }
+
+            var resBooks11 = books
+                .Where( x => x.Publisher == "Mirim" && x.Author.Contains( "J" ) )
+                .Select( x => new { x.Title, x.Price } );
+
+            var resBooks12 = from book in books
+                             where book.Publisher == "Mirim" && book.Author.Contains( "J" )
+                             select new { book.Title, book.Price };
+            Console.WriteLine( "resBooks11" );
+            foreach ( var iter in resBooks11 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Title, iter.Price );
+            }
+            Console.WriteLine( "resBooks12" );
+            foreach ( var iter in resBooks12 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Title, iter.Price );
+            }
+
+            var resBooks13 = books
+                .OrderBy( x => x.Author )
+                .ThenBy( x => x.Price )
+                .Select( x => new { x.Author, x.Price } );
+
+            var resBooks14 = from book in books
+                             orderby book.Author, book.Price
+                             select new { book.Author, book.Price };
+            Console.WriteLine( "resBooks13" );
+            foreach ( var iter in resBooks13 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Price );
+            }
+            Console.WriteLine( "resBooks14" );
+            foreach ( var iter in resBooks14 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Price );
+            }
+
+            var resBooks15 = books
+                .OrderBy( x => x.Author )
+                .ThenByDescending(x=>x.Price)
+                .Select( x => new { x.Author, x.Price } );
+
+            var resBooks16 = from book in books
+                             orderby book.Author, book.Price descending
+                             select new { book.Author, book.Price };
+            Console.WriteLine( "resBooks15" );
+            foreach ( var iter in resBooks15 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Price );
+            }
+            Console.WriteLine( "resBooks16" );
+            foreach ( var iter in resBooks16 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Price );
+            }
+
+            var resBooks17 = books
+                .GroupBy( x => x.Author )
+                .Select( g => new { Author = g.Key, Ave = g.Average( x => x.Price ) } );
+
+            var resBooks18 = from book in books
+                             group book by book.Author into g
+                             select new { Author=g.Key,Ave=g.Average(x=>x.Price) };
+            Console.WriteLine( "resBooks17" );
+            foreach ( var iter in resBooks17 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Ave );
+            }
+            Console.WriteLine( "resBooks18" );
+            foreach ( var iter in resBooks18 )
+            {
+                Console.WriteLine( "{0,8}:{1,6}", iter.Author, iter.Ave );
+            }
+
+            var resBooks19 = books
+                .Join( resBooks17, x => x.Author, r => r.Author, ( x, r ) => new { x.Author, x.Price, r.Ave } );
+
+            var resBooks20 = from book in books
+                             join stat in resBooks18
+                             on book.Author equals stat.Author
+                             select new { book.Author, book.Price, stat.Ave };
+                        
+            Console.WriteLine( "resBooks19" );
+            foreach ( var iter in resBooks19 )
+            {
+                Console.WriteLine( "{0,8}:{1,5}:{2,6}", iter.Author, iter.Price, iter.Ave );
+            }
+            Console.WriteLine( "resBooks20" );
+            foreach ( var iter in resBooks20 )
+            {
+                Console.WriteLine( "{0,8}:{1,5}:{2,6}", iter.Author, iter.Price, iter.Ave );
+            }
+
+
 
 
             Console.ReadKey();
